@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "square/proto";
+option java_multiple_files = true;
+option java_package = "com.vinson.square.gprc";
+option java_outer_classname = "SquareCaculatorProto";
+
+package proto;
+
+service SquareCaculator {
+  rpc SayHello (SquareRequest) returns (SquareReply) {}
+}
+
+message SquareRequest {
+  int32 factor = 1;
+}
+
+message SquareReply {
+  int32 result = 1;
+}
